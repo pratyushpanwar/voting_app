@@ -1,11 +1,12 @@
 const mongoose =require('mongoose');
 require('dotenv').config();
 
-//MongoDB connection URL
+//MongoDB connection URL 
+ 
 
-const mongoURL = process.env.MONGODB_URL_LOCAL;
-//const mongoURL = process.env.MONGODB_URL;
-
+//const mongoURL = process.env.MONGODB_URL_LOCAL; 
+const mongoURL = process.env.MONGODB_URL;
+ 
 //setup mongoDB connection
 
 //mongoose.connect(mongoURL)
@@ -13,7 +14,7 @@ mongoose.connect(mongoURL)
 
 //get default connection
 
-const db=mongoose.connection;
+const db=mongoose.connection; 
 
 //event listner setup
 db.on('connected', ()=>{
